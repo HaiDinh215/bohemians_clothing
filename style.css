@@ -1,0 +1,598 @@
+/*Free shipping note @ the top of the page*/
+#HeaderNote{
+  background-color:white/*Change color when everything is aligned*/
+}
+
+/*-------------------Header------------*/
+.iconnetwork img{
+  width: 17px;
+  height: 17px;
+}
+.iconnetwork {
+  width: 100%;
+  height: 0px;
+  float: left;
+}
+.headword{
+
+  text-align: center;
+  Color:black;
+}
+/* Slideshow container */
+.container{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/*-----------------Navigation-------------*/
+#nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-brand img
+{
+  transform: none;
+  position:absolute;
+  height:70px;
+  width:150px;
+  left:730px;
+  top:10px;
+  text-align: center;
+}
+.navbar-nav li
+{
+  padding: 0 10px;
+}
+.navbar-nav li a
+{
+  float: right;
+  text-align: left;
+}
+#nav-bar ul li a:hover{
+  color: black;
+}
+.navbar
+{
+  background: #fff;
+  background-color:black;
+  height:85px;
+
+}
+navbar-toggler
+{
+  border: none!important;
+}
+.nav-link
+{
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+#slider
+{
+  text-align: center;
+}
+.one image
+{
+  width:540px;
+  height: auto;
+}
+.home_image{
+  width:540px;
+  height: auto;
+}
+img
+{
+  height: 400px;
+  width: 950px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align:center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -180%);
+}
+.fixsize{
+  height:1080px;
+  width:1080px;
+}
+
+.buttonword{
+  border: none;
+  text-decoration: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+.buttonword h2{
+  color: black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*navigation drop bar*/
+
+.dropbtn {
+  background-color: black;
+  text-align:center;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  height:55px;
+  width:75px;
+  border: none;
+}
+.color{
+  color: black;
+}
+.dropdown-content {
+  border-color: aliceblue;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+/*Link content*/
+.top{
+ text-align: right;
+}
+
+a:link {
+  color: white;
+  text-decoration:none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration:none;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+  text-decoration:none;
+}
+
+/* selected link */
+a:active {
+  color: white;
+  text-decoration:none;
+}
+
+/*-----------------------------------------Footer---------------------*/
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100px;
+   text-align: center;
+}
+.iconnetwork_footer p{
+  color: black;
+}
+.iconnetwork_footer img{
+  width: 30px;
+  height: 30px;
+}
+.iconnetwork_footer a:link{
+  color:black
+}
+.iconnetwork_footer a:visited{
+  color:black
+}
+.iconnetwork_footer a:hover{
+  text-decoration: none;
+  color:hotpink;
+}
+.iconnetwork_footer b{
+  color: black;
+}
+
+
+/*---------------Sliding Image-----------------*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.mySlides {
+ display: none;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*---------------Home Image-----------------*/
+.homecenter {
+  margin-bottom: 10px;
+  margin: 5%;
+  margin-left: 50%;
+}
+.homepic{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding-bottom: 65%;
+  overflow: hidden;
+}
+.fixsize1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+
+}
+
+}
+<!-------------Login-----------!>
+#login{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right:auto;
+}
+.loginhead{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right:auto;
+}
+.createhead{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right:auto;
+
+}
+.loginword h2{
+  color: #000000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 100;
+  margin-bottom: 10px;
+  line-height: normal;
+
+}
+.submitSign{
+  color: white;
+}
+.loginformtype{
+  padding:15px 120px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  height: 50px;
+  margin: 0px;
+  margin-top:0px;
+  margin-bottom: 20px;
+  text-indent: 15px;
+}
+.loginInstructions{
+  color: black;
+}
+a.forgotpassword{
+  color: black;
+}
+.wordinlogin{
+  color: #000000;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------validation form---------*/
+/* Style input fields */
+.row input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* The message_password box is shown when the user clicks on the password field */
+#message_password {
+  display:none;
+  background: white;
+  color: black;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message_password p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+/* The message_username box is shown when the user clicks on the username field */
+#message_username {
+  display:none;
+  background: white;
+  color: black;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message_username p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: hotpink;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a black text color and an "x" when the requirements are wrong */
+.invalid {
+  color: black;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+<!-------------Informationpage---------------!>
+.infoimage {
+  float: right;
+  margin-bottom: 10px;
+  margin-left: 50%;
+}
+.infopic{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding-bottom: 65%;
+  overflow: hidden;
+}
+.infosizepic{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+
+}
+.infoword{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+
+}
+.infopoword{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.57;
+}
+<!-------------Feedback-----------!>
+.FEEDBACK{
+  height: 500px;
+  width: 600px;
+  background: #FFF;
+  transform: translate(60%,20%);
+  border-radius: 15px;
+  box-shadow: 0px 2px 30px 0px #000;
+  padding: 0;
+  margin: 0;
+}
+.feedback_content h5{
+  color: #333;
+  font-family: "Century Gothic";
+  font-size: 12px;
+  text-align: center;
+}
+.feedback_content h2{
+  color: #333;
+  font-family: "Century Gothic";
+  font-size: 14px;
+  text-align: center;
+}
+.feedback_content {
+  color: #333;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+input[type="text"], input[type="email"] {
+  width: 50%;
+  height: 30px;
+  color: black;
+}
+textarea{
+  width: 50%;
+  height: 300px;
+}
+input[type="submit"], input[type="reset"] {
+  background-color: black;
+  float: absolute;
+}
+input[value="SEND"], input[value="RESET"] {
+  color: white;
+  font-weight: bold;
+}
+<!----------Thank---Feedback-----------!>
+.ThankFeedback{
+  height: 500px;
+  width: 600px;
+  background: #FFF;
+  transform: translate(60%,20%);
+  border-radius: 15px;
+  box-shadow: 0px 2px 30px 0px #000;
+  padding: 0;
+  margin: 0;
+}
+.Thankfeedback_content h1{
+  font-family: "Century Gothic";
+  font-size: 50px;
+  text-align: center;
+}
+<!-------------Forgot-Password----------!>
+.FORGOT{
+  height: 500px;
+  width: 600px;
+  background: #FFF;
+  transform: translate(60%,20%);
+  border-radius: 15px;
+  box-shadow: 0px 2px 30px 0px #000;
+  padding: 0;
+  margin: 0;
+}
+.FORGOT_content h2{
+  color: #333;
+  font-family: "Century Gothic";
+  font-size: 30px;
+  text-align: center;
+}
+.FORGOT_content{
+  text-align: center;
+}
+.wordinforgot{
+  color: #000000;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  font-weight: 200;
+}
