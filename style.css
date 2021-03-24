@@ -14,9 +14,12 @@
   float: left;
 }
 .headword{
-
   text-align: center;
   Color:black;
+}
+.search_container button{
+  background-color: pink;
+  height: 30px;
 }
 /* Slideshow container */
 .container{
@@ -51,15 +54,11 @@
   float: right;
   text-align: left;
 }
-#nav-bar ul li a:hover{
-  color: black;
-}
 .navbar
 {
   background: #fff;
   background-color:black;
   height:85px;
-
 }
 navbar-toggler
 {
@@ -96,29 +95,9 @@ img
   width: 100%;
   text-align:center;
 }
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-60%, -180%);
-}
 .fixsize{
-  height:1080px;
+  height:800px;
   width:1080px;
-}
-
-.buttonword{
-  border: none;
-  text-decoration: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-block;
-}
-.buttonword h2{
-  color: black;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*navigation drop bar*/
@@ -153,39 +132,26 @@ img
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
-
+.dropdown-content a{
+  background-color: white;
+}
+.dropdown-content a:hover {
+  color: pink;
+  background-color: white;
+}
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
 /*Link content*/
+.dropdown-content a:hover{
+  text-decoration: none;
+}
 .top{
- text-align: right;
-}
-
-a:link {
+  text-decoration: none;
   color: white;
-  text-decoration:none;
 }
-
-/* visited link */
-a:visited {
-  color: white;
-  text-decoration:none;
-}
-
-/* mouse over link */
-a:hover {
-  color: blue;
-  text-decoration:none;
-}
-
-/* selected link */
-a:active {
-  color: white;
-  text-decoration:none;
+.top:hover{
+  color: pink;
+  text-decoration: none;
 }
 
 /*-----------------------------------------Footer---------------------*/
@@ -324,20 +290,20 @@ a:active {
   position: relative;
   width: 100%;
   height: 50%;
-  padding-bottom: 65%;
+  /* padding-bottom: 65%; */
   overflow: hidden;
 }
 .fixsize1{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 
 }
 
-}
-<!-------------Login-----------!>
+
+/* ------------Login----------- */
 #login{
   max-width: 400px;
   margin-left: auto;
@@ -470,27 +436,14 @@ a.forgotpassword{
   content: "✖";
 }
 
-<!-------------Informationpage---------------!>
-.infoimage {
-  float: right;
-  margin-bottom: 10px;
-  margin-left: 50%;
-}
-.infopic{
-  position: relative;
-  width: 100%;
-  height: 50%;
-  padding-bottom: 65%;
-  overflow: hidden;
-}
-.infosizepic{
-
+/* -----------Informationpage------------ */
+.infoimage img{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   height: 50%;
-
+  padding-bottom: 50px;
 }
 .infoword{
   display: block;
@@ -498,15 +451,15 @@ a.forgotpassword{
   margin-right: auto;
   width: 80%;
   height: 50%;
-
+  padding: 30px 0;
 }
 .infopoword{
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.57;
+  line-height: 1.57; */
 }
-<!-------------Feedback-----------!>
-.FEEDBACK{
+/* ------------Feedback----------- */
+/* .FEEDBACK{
   height: 500px;
   width: 600px;
   background: #FFF;
@@ -515,7 +468,7 @@ a.forgotpassword{
   box-shadow: 0px 2px 30px 0px #000;
   padding: 0;
   margin: 0;
-}
+} */
 .feedback_content h5{
   color: #333;
   font-family: "Century Gothic";
@@ -535,14 +488,16 @@ a.forgotpassword{
   text-align: center;
   font-weight: bold;
 }
-input[type="text"], input[type="email"] {
+.feedback_content input[type="text"], input[type="email"] {
   width: 50%;
   height: 30px;
   color: black;
+  border-radius: 10px;
 }
 textarea{
   width: 50%;
   height: 300px;
+  border-radius: 10px;
 }
 input[type="submit"], input[type="reset"] {
   background-color: black;
@@ -552,7 +507,7 @@ input[value="SEND"], input[value="RESET"] {
   color: white;
   font-weight: bold;
 }
-<!----------Thank---Feedback-----------!>
+/* --------Thank---Feedback--------- */
 .ThankFeedback{
   height: 500px;
   width: 600px;
@@ -568,7 +523,7 @@ input[value="SEND"], input[value="RESET"] {
   font-size: 50px;
   text-align: center;
 }
-<!-------------Forgot-Password----------!>
+/* ------------Forgot-Password--------- */
 .FORGOT{
   height: 500px;
   width: 600px;

@@ -44,19 +44,19 @@
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
-                    <a href="information.html">Information page</a>
                     <a href="aboutus.html">About Us</a>
+                    <a href="information.html">Information</a>
                     <a href="login.html">Login</a>
                     <a href="feedback.html">Feedback</a>
                 </div>
             </div>
             <!--Home Login search content-->
             <div class="link ml-auto">
-               <a class="top" href="home.html">Home</a>
-               <a class="top" href="login.html">Login</a>
-               <div class="search-container">
+             <a class="top" href="home.html">Home</a>
+             <a class="top" href="login.html">Login</a>
+             <div class="search_container">
                 <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
+                  <input class="search_box" type="text" placeholder="Search..." name="search">
                   <button type="submit"><i class="fa fa-search"></i></button>
               </form>
           </div>
@@ -118,33 +118,101 @@
 
 <section id="login">
     <div class="row">
-        <div class="column"> <!-- column1 account login -->
+        <div class="column">
             <nav class="loginhead">
-                <form action="thankfeedback.html" method="post">
+                <?php
+                session_start();
+                //define variables and set to empty values
+                $unameErr = $passErr = $loginErr = "";
+                $uname = $password = "";
+                $leveltest = "";
+
+
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+                if (empty($_POST["username"])) {
+                $unameErr = "Name is required";
+                } else {
+                $uname = test_input($_POST["username"]);  
+                $_SESSION['user']=$uname;
+                }
+
+                if (empty($_POST["password"])) {
+                $passErr = "Password is required";
+                } else {
+                $password = test_input($_POST["password"]); 
+                }
+
+
+
+
+                //continues to target page if all validation is passed
+                if ( $unameErr ==""&& $passErr ==""){
+                // check if exists in database
+                $dbc=mysqli_connect('localhost','root','','db3')
+                or die("Could not Connect!\n");
+                $hashpass=hash('sha256',$password);
+                $sql="SELECT * from registration WHERE username ='$uname' AND password='$hashpass'";
+
+                $result =mysqli_Query($dbc,$sql) or die (" Error querying database");
+                $a=mysqli_num_rows($result);
+                $row = mysqli_fetch_array($result);
+                $leveltest=$row['level'];
+
+
+
+                if ($a===1){
+                if($leveltest==0){header('Location: adminpage.php');}
+                else{header('Location: product.php');}
+                }     
+
+                else{
+                $loginErr="Invalid username or password";
+                }
+                }
+                }
+
+                // clears spaces etc to prep data for testing
+                function test_input($data){
+                $data=trim ($data); // gets rid of extra spaces befor and after
+                $data=stripslashes($data); //gets rid of any slashes
+                $data=htmlspecialchars($data); //converts any symbols usch as < and > to special characters
+                return $data;
+                }
+
+                ?>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <a class="loginword"><h2>Login</h2></a>
+
                     <br><a class="wordinlogin">Username</a>
-                    <br><input class="loginformtype" placeholder="Enter your username here..." pattern="(?=[a-zA-Z])(?=.*\d)"required>
+                    <br><input class="loginformtype" type="username"  name="username" id="username" value="<?php echo $uname;?>"/>
+                    <span class="error"> <?php echo $unameErr;?></span><br/><br/>  
+
                     <br><a class="wordinlogin">Password</a>
-                    <br><input class="loginformtype" type="password" placeholder="********" pattern="(?=^[a-zA-Z])(?=.*\d)(?=(*!)).{8,16}"required>
-                    <br><a class="forgotpassword" href="forgotpassword.html">Forgot password?</a>
+                    <br><input class="loginformtype" type="password" id="password" name="password" value="<?php echo $password;?>"/>
+                    <span class="error"> <?php echo $passErr;?></span><br/><br/>
+                    <span class="error"> <?php echo $loginErr;?></span>
+
                     <br><a><input class="submitSign" type="submit" onclick="return validate()" value="Sign In"></a>
                 </form>
             </nav>
         </div>
-      </div>
-      <script src="validation.js" ></script>
+
+        <div class="column">
+            <nav class="createhead">
+                <a class="loginword"><h2>Description</h2></a>
+                <br><a class="loginInstructions"><b>Login Instructions</b></a>
+                <br><p>Please key your username and password carefully as username contains letters, numbers and it must begin with a letter while password contains least 1 digit, 1 capital letter,at least 1 special letter ! Or * and it must be 8 to 16 characters long and start with a letter.</p>
+                <br><a class="loginInstructions"><b>Security</b></a>
+                <br><p>For sercurity reasons, please log out and exit your web browser when you are done accessing services that require authentication.</p>
+            </nav>
+        </div>
+    </div>
 </section>
 
 <br><br><br><br><br><br><br><br><br>
-
-<div class="loginInstructions">
-  <h2>Description</h2>
-  <br><b>Security</b>
-  <br><p>For sercurity reasons, please log out and exit your web browser when you are done accessing services that require authentication.</p>
-</div>
-
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 
 <!------------Footer-------------------->
 <section>

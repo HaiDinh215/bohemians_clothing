@@ -44,19 +44,19 @@
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
-                    <a href="information.html">Information page</a>
                     <a href="aboutus.html">About Us</a>
-                    <a href="login.html">Login</a>
+                    <a href="information.html">Information</a>
+                    <a href="login.php">Login</a>
                     <a href="feedback.html">Feedback</a>
                 </div>
             </div>
             <!--Home Login search content-->
             <div class="link ml-auto">
-               <a class="top" href="home.html">Home</a>
-               <a class="top" href="login.html">Login</a>
-               <div class="search-container">
+             <a class="top" href="home.html">Home</a>
+             <a class="top" href="login.php">Login</a>
+             <div class="search_container">
                 <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
+                  <input class="search_box" type="text" placeholder="Search..." name="search">
                   <button type="submit"><i class="fa fa-search"></i></button>
               </form>
           </div>
@@ -69,74 +69,74 @@
     <div class="FEEDBACK">
         <div class="feedback_content">
             <h5>FOR YOUR REFFERENCE, HERE ARE THE VARIOUS METHODS TO CONTACT BOHEMIANS CLOTHING. IF YOU AREN'T ANSWERED IMMEDIATELY. PLEASE BE PATIENT, YOUR CONTACT REQUEST WILL MOST CERTAINLY BE ANSWERED <br/>AS QUICKLY AS POSSIBLE</h5><br />
-            <h2><b>DIRECT INQUIRES</b></h2><br/>
-            <h2><b>EXCHANGES/CREDIT/ONLINE</b></h2><br /><br /><br /><br />
+            <h2><b>DIRECT INQUIRES</b></h2>
+            <h2><b>EXCHANGES/CREDIT/ONLINE</b></h2>
             <h2><b>TELL US ABOUT SERVICE</b></h2>
-<script language="javascript">
-    function validate(){
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var area = document.getElementById("area").value;
-        var message1 =document.getElementById("message1");
-        var message2 =document.getElementById("message2");
-        var message3 =document.getElementById("message3");
-        if(name == "" && email == "" && area == ""){
-            message1.innerHTML =("Missing Name");
-            message2.innerHTML =("Missing Email");
-            message3.innerHTML =("Missing Feedback");
-            message1.style.color = "red";
-            message2.style.color = "red";
-            message3.style.color = "red";
-            return false;
-        }
-        if(name == "" && email == ""){
-            message1.innerHTML =("Missing Name");
-            message2.innerHTML =("Missing Email");
-            message1.style.color = "red";
-            message2.style.color = "red";
-            message3.innerHTML =("");
-            return false;
-        }
-        if(name == "" && area == ""){
-            message1.innerHTML =("Missing Name");
-            message3.innerHTML =("Missing Feedback");
-            message1.style.color = "red";
-            message3.style.color = "red";
-            message2.innerHTML =("");
-            return false;
-        }
-        if(email == "" && area == ""){
-            message2.innerHTML =("Missing Email");
-            message3.innerHTML =("Missing Feedback");
-            message2.style.color = "red";
-            message3.style.color = "red";
-            message1.innerHTML =("");
-            return false;
-        }
-        if (name == ""){
-            message1.innerHTML =("Missing Name");
-            message1.style.color = "red";
-            message2.innerHTML =("");
-            message3.innerHTML =("");
-            return false;
-        }
-        if (email == ""){
-            message2.innerHTML =("Missing Email");
-            message2.style.color = "red";
-            message1.innerHTML =("");
-            message3.innerHTML =("");
-            return false;
-        }
-        if (area == ""){
-            message3.innerHTML =("Missing Feedback");
-            message3.style.color = "red";
-            message2.innerHTML =("");
-            message1.innerHTML =("");
-            return false;
-        }
-        return true;
-    }
-</script>
+            <script language="javascript">
+                function validate(){
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var area = document.getElementById("area").value;
+                    var message1 =document.getElementById("message1");
+                    var message2 =document.getElementById("message2");
+                    var message3 =document.getElementById("message3");
+                    if(name == "" && email == "" && area == ""){
+                        message1.innerHTML =("Missing Name");
+                        message2.innerHTML =("Missing Email");
+                        message3.innerHTML =("Missing Feedback");
+                        message1.style.color = "red";
+                        message2.style.color = "red";
+                        message3.style.color = "red";
+                        return false;
+                    }
+                    if(name == "" && email == ""){
+                        message1.innerHTML =("Missing Name");
+                        message2.innerHTML =("Missing Email");
+                        message1.style.color = "red";
+                        message2.style.color = "red";
+                        message3.innerHTML =("");
+                        return false;
+                    }
+                    if(name == "" && area == ""){
+                        message1.innerHTML =("Missing Name");
+                        message3.innerHTML =("Missing Feedback");
+                        message1.style.color = "red";
+                        message3.style.color = "red";
+                        message2.innerHTML =("");
+                        return false;
+                    }
+                    if(email == "" && area == ""){
+                        message2.innerHTML =("Missing Email");
+                        message3.innerHTML =("Missing Feedback");
+                        message2.style.color = "red";
+                        message3.style.color = "red";
+                        message1.innerHTML =("");
+                        return false;
+                    }
+                    if (name == ""){
+                        message1.innerHTML =("Missing Name");
+                        message1.style.color = "red";
+                        message2.innerHTML =("");
+                        message3.innerHTML =("");
+                        return false;
+                    }
+                    if (email == ""){
+                        message2.innerHTML =("Missing Email");
+                        message2.style.color = "red";
+                        message1.innerHTML =("");
+                        message3.innerHTML =("");
+                        return false;
+                    }
+                    if (area == ""){
+                        message3.innerHTML =("Missing Feedback");
+                        message3.style.color = "red";
+                        message2.innerHTML =("");
+                        message1.innerHTML =("");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
             <form action="thankfeedback.html" method="post">
                 <input type="text"  id="name" placeholder="Enter Your Name" autofocus/><br />
                 <div id="message1"></div><br />
@@ -150,8 +150,7 @@
         </div>
     </div>
 </section>
-
-
+<br><br>
 <!----------Footer-------------------->
 <section>
   <footer>
