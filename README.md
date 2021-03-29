@@ -7,7 +7,12 @@ This website was co-developed in my internet programming class with 3 other stud
 Download the whole repository and unzip and it is ready to be viewed in a web browser
 
 ## Images
-![Bohemians Homepage](https://github.com/HaiDinh215/bohemians_clothing/tree/master/readme_assets/Bohemians_homepage.png)
+#### Bohemians Homepage:
+<p align="center"><img  src="./readme_assets/Bohemians_homepage.png" width="100%"></p>
+#### Navigation Menu:
+<p align="center"><img  src="./readme_assets/Bohemians_menu_navigation_box.png" width="30%"></p>
+#### Bohemians Feedback Form:
+<p align="center"><img  src="./readme_assets/Bohemians_feedback_form.png" width="100%"></p>
 
 ## Technologies Used
 * Page contents and structures are builded using HTML
