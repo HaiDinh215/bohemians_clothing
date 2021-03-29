@@ -7,8 +7,7 @@ This website was co-developed in my internet programming class with 3 other stud
 Download the whole repository and unzip and it is ready to be viewed in a web browser
 
 ## Images
-Some screenshots of the website
-
+![Bohemians Homepage](https://github.com/HaiDinh215/bohemians_clothing/tree/master/readme_assets/bohemians_homepage.png)
 
 ## Technologies Used
 * Page contents and structures are builded using HTML
