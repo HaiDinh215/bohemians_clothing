@@ -24,6 +24,9 @@ Download the whole repository and unzip and it is ready to be viewed in a web br
   
 **Bohemians Feedback Form:**
   <p align="center"><img  src="./readme_assets/Bohemians_feedback_form.png" width="100%"></p>
+  
+## DataBase 
+The system used to store user informations and products database in this project is phpMyAdmin
 
 ## Technologies Used
 * Page contents and structures are builded using HTML
